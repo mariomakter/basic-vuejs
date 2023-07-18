@@ -27,7 +27,7 @@ npm run dev
 ```sh
 npm run build
 ```
-#differents between ref and reactive state on rectivity fundamentals
+###differents between ref and reactive state on rectivity fundamentals
 
 In Vue.js 3, both ref and reactive state (reactive) are used for managing reactive data. They both provide a way to create reactive data that triggers updates to the user interface when the data changes. However, there are some key differences between the two:
 
