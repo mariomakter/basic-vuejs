@@ -16,7 +16,7 @@ import {ref, reactive} from 'vue';
 let title = ref(' Built in directives -  v-tex');
 const count = ref(0);
 let rawHtml = ref('<li>task1</li>');
-let showBtn = ref(false)
+let showBtn = ref(true)
 let course = reactive({
   name: 'vuejs',
   mentor_firstName:'Ibrahim',
