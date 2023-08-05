@@ -7,7 +7,7 @@
     </div>
   </div>
   <div class="">
-    <img :src="imgurl" alt="">
+    <img v-bind:src="imgurl" alt="">
   </div>
   </div>
 </template>
