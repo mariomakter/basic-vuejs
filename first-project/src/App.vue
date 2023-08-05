@@ -2,27 +2,22 @@
   <div class="container">
     <div class="row">
       <div class="col">
-       <h1 v-if="showBtn">{{ course.name }} by using<span v-text="title"></span></h1>
-       <h1 v-else-if="!showBtn">{{ showBtn }}</h1>
-       <h1 v-else>no thing happen</h1>
-       <h2>couese by {{ fullName }}</h2>
-      </div>
-      <button @click="showBtn=!showBtn">show/hide</button>
+
+  <h1 v-for="(todo,index) in todoList" :key="index">{{ index }}/{{ todo.todo }}</h1>
     </div>
+  </div>
   </div>
 </template>
 <!-- ref state -->
 <script setup>
 import {ref, reactive} from 'vue';
-let title = ref(' Built in directives -  v-tex');
-const count = ref(0);
-let rawHtml = ref('<li>task1</li>');
+let title = ref(' Built in directives -  v-for');
 let showBtn = ref()
-let course = reactive({
-  name: 'vuejs',
-  mentor_firstName:'Ibrahim',
-  mentor_lastName:'Mahmud',
-  platform:'Instructory'
-});
+let todoList = ref([
+{id:1, todo:'task1'},
+{id:2, todo:'task2'},
+{id:3, todo:'task3'},
+])
+
 
 </script>
