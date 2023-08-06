@@ -13,7 +13,7 @@
           <img v-bind:src="imgurl" alt="" />
         </div>
         <div class="static"
-          :class="{'bg-primary':isActive, 'text-denger':hasError}">
+          :style="styleObject">
           Lorem Ipsum is simply dummy text of the printing and
            typesetting industry. Lorem Ipsum has been the industry'
            s standard dummy text ever since the 1500s, when an unknown
@@ -28,14 +28,18 @@
 import { ref, reactive } from "vue";
 let title = ref(" Built in directives -  v-bind");
 
-let isActive = ref(true);
-let hasError = ref(true);
+let isActive = ref('active');
+let hasError = ref('text-danger');
 let showBtn = ref();
 let todoList = ref([
   { id: 1, todo: "task1" },
   { id: 2, todo: "task2" },
   { id: 3, todo: "task3" },
 ]);
+const styleObject = reactive({
+  color: 'red',
+  fontsize: '20px',
+})
 let imgurl = ref("https://picsum.photos/200");
 </script>
 <style>
